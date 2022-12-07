@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chỉ số khối cơ thể</title>
+</head>
+<body>
+<label>
+    Chiều cao (m):<input type="text" id="m">
+</label>
+<label>
+    Cân nặng (kg):<input type="text" id="kg">
+</label>
+<label>
+    <p id="hienthi"></p>
+</label>
+<label>
+    <button onclick="lam()">BMI</button>
+</label>
+<script>
+    function lam() {
+        let kg = +document.getElementById('kg').value,
+        d = +document.getElementById('m').value,
+        lam = kg / Math.pow(d, 2);
+        if (lam < 18) {
+            document.getElementById('hienthi').innerHTML = + lam + ' nghiện ít thôi!!! ';
+        } else if (lam < 25) {
+            document.getElementById('hienthi').innerHTML = + lam + ' ngon đấy';
+        } else {
+            document.getElementById('hienthi').innerHTML = + lam + ' ăn ít thôi';
+        }
+    }
+</script>
+</body>
+</html>
