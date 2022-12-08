@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhâp số a b</title>
+</head>
+<body>
+<input id="nhapa" type="text">
+<input id="nhapb" type="text">
+<button onclick="ketqua()">TÍNH</button>
+<h3 id="hienKQ"></h3>
+</body>
+<script>
+    function ketqua() {
+        let a = +document.getElementById('nhapa').value;
+        let b = +document.getElementById('nhapb').value;
+        if (a % b === 0) {
+            document.getElementById('hienKQ').innerHTML = ' a chia hết cho b nhé!!! '
+        } else {
+            document.getElementById('hienKQ').innerHTML = ' a không chia hết cho b đâu!!! '
+        }
+
+    }
+</script>
+</html>

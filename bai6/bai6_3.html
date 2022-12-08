@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>so sánh với 0</title>
+</head>
+<body>
+<input id="nhapVao" type="text">
+<button onclick="keTqua()">Kết quả</button>
+<h3 id="hienThi"></h3>
+</body>
+<script>
+  function keTqua() {
+    let a = document.getElementById('nhapVao').value;
+    if (a>0) {
+      document.getElementById('hienThi').innerHTML = ' a lớn hơn 0!!! '
+    } else {
+      document.getElementById('hienThi').innerHTML = ' a nhỏ hơn 0 nhé!!! '
+    }
+  }
+</script>
+</html>

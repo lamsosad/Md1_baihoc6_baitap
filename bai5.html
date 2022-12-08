@@ -4,10 +4,20 @@
     <meta charset="UTF-8">
     <title>ứng dụng G-C-F</title>
 </head>
-<body>
-<input id="good" min="0" max="10" type="range" onclick="co1()">Good<br>
-<input id="cheap" min="0" max="10" type="range" onclick="co2()">Cheap<br>
-<input id="fast" min="0" max="10" type="range" onclick="co3()">Fast<br>
+<body style="padding-left: 40%">
+<table style="background-color: blanchedalmond">
+    <tr>
+        <td><input id="good" min="0" max="5" type="range" onclick="co1()">Good</td>
+    </tr>
+    <tr>
+        <td><input id="cheap" min="0" max="5" type="range" onclick="co2()">Cheap</td>
+    </tr>
+    <tr>
+        <td><input id="fast" min="0" max="5" type="range" onclick="co3()">Fast</td>
+    </tr>
+</table>
+
+
 </body>
 <script>
     let good = false;
@@ -16,7 +26,7 @@
 
     function co1() {
         if (good = !good) {
-            document.getElementById('good').value = 10;
+            document.getElementById('good').value = 5;
             if (cheap && fast) {
                 document.getElementById('fast').value = 0;
                 fast = false;
@@ -25,9 +35,10 @@
             document.getElementById('good').value = 0;
         }
     }
+
     function co2() {
-        if (cheap= !cheap) {
-            document.getElementById('cheap').value = 10;
+        if (cheap = !cheap) {
+            document.getElementById('cheap').value = 5;
             if (good && fast) {
                 document.getElementById('good').value = 0;
                 good = false;
@@ -36,9 +47,10 @@
             document.getElementById('cheap').value = 0;
         }
     }
+
     function co3() {
-        if (cheap= !cheap) {
-            document.getElementById('fast').value = 10;
+        if (cheap = !cheap) {
+            document.getElementById('fast').value = 5;
             if (good && fast) {
                 document.getElementById('good').value = 0;
                 good = false;

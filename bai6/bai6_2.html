@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ĐK học lớp 10</title>
+</head>
+<body>
+<input id="tuoi" type="text">
+<button onclick="ketqua()">XEM</button>
+<h3 id="hienthi"></h3>
+</body>
+<script>
+
+    function ketqua() {
+        let a = +document.getElementById('tuoi').value;
+        if (a === 16) {
+            document.getElementById('hienthi').innerHTML = ' Cháu đủ tuổi nhé';
+        } else {
+            if (a > 16) {
+                document.getElementById('hienthi').innerHTML = ' Cháu quá tuổi rùi';
+            } else {
+                document.getElementById('hienthi').innerHTML = ' Cháu chưa đủ tuổi rùi';
+            }
+        }
+    }
+</script>
+</html>
