@@ -5,6 +5,20 @@
     <title>Tính hoa hồng</title>
 </head>
 <body>
-
+<input id="nhapl" type="number" max="300"><br><br>
+<button onclick="kiemtra()">Kiểm tra</button>
+<h3 id="hiEn"></h3>
 </body>
+<script>
+    function kiemtra() {
+        let a = +document.getElementById('nhapl').value;
+        if (a <= 100) {
+            b = +a + 5
+                document.getElementById('hiEn').innerHTML = 'Lương của bé sẽ là:   ' + b + ' triệu';
+        } else if (a <= 300 && a > 100) {
+            c = +a + 30
+                document.getElementById('hiEn').innerHTML = ' Lương của bé sẽ là:   ' + c + ' triệu';
+        }
+    }
+</script>
 </html>
