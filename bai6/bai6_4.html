@@ -7,6 +7,32 @@
 <body>
 <input id="so1" type="text">
 <input id="so2" type="text">
-
+<input id="so3" type="text">
+<button onclick="soSanh()">Kết quả</button>
+<h3 id="hienthI"></h3>
 </body>
+<script>
+    function soSanh() {
+        let a = document.getElementById('so1').value;
+        let b = document.getElementById('so2').value;
+        let c = document.getElementById('so3').value;
+        if (a > b && a > c) {
+            document.getElementById('hienthI').innerHTML = ' a lớn nhất'
+        } else {
+            document.getElementById('hienthI').innerHTML = ' a nhỏ nhất'
+        }
+        if (b > a && b > c) {
+            document.getElementById('hienthI').innerHTML = ' b lớn nhất'
+        } else {
+            document.getElementById('hienthI').innerHTML = ' b nhỏ nhất'
+        }
+        if (c > a && c > b) {
+            document.getElementById('hienthI').innerHTML = ' c lớn nhất'
+        } else {
+            document.getElementById('hienthI').innerHTML = ' c nhỏ nhất'
+        }
+    }
+
+
+</script>
 </html>

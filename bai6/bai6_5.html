@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<b>Điểm kiểm tra </b><input id="diemKT" type="number" max="10" min="0"><br><br>
+<b>Điểm giữa kỳ </b><input id="diemGK" type="number" max="10" min="0"><br><br>
+<b>Điểm cuối kỳ </b><input id="diemCK" type="number" max="10" min="0"><br><br>
+<button onclick="Tinhkq()">TÍNH KẾT QUẢ</button>
+<h3 id="hieN"></h3>
+</body>
+<script>
+    function Tinhkq() {
+        let a = +document.getElementById('diemKT').value;
+        let b = +document.getElementById('diemGK').value;
+        let c = +document.getElementById('diemCK').value;
+        let tB = +(a + b + c) / 3;
+        if (tB < 5) {
+            document.getElementById('hieN').innerHTML = ' Học lực yếu no đòn!!!'
+        } else {
+            if (tB > 5 && tB < 6.5) {
+                document.getElementById('hieN').innerHTML = ' Học lực trung bình vẫn bị ăn đòn!!!'
+            } else {
+                if (tB > 6.5 && tB < 8) {
+                    document.getElementById('hieN').innerHTML = ' Học lực khá cố gắng thêm!!!'
+                } else {
+                    document.getElementById('hieN').innerHTML = ' Học lực giỏi mãi đỉnh!!!'
+                }
+            }
+
+        }
+    }
+</script>
+</html>

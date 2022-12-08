@@ -20,14 +20,14 @@
 <script>
     function lam() {
         let kg = +document.getElementById('kg').value,
-        d = +document.getElementById('m').value,
-        lam = kg / Math.pow(d, 2);
+            d = +document.getElementById('m').value,
+            lam = kg / Math.pow(d, 2);
         if (lam < 18) {
-            document.getElementById('hienthi').innerHTML = + lam + ' nghiện ít thôi!!! ';
+            document.getElementById('hienthi').innerHTML = +lam + ' nghiện ít thôi!!! ';
         } else if (lam < 25) {
-            document.getElementById('hienthi').innerHTML = + lam + ' ngon đấy';
+            document.getElementById('hienthi').innerHTML = +lam + ' ngon đấy';
         } else {
-            document.getElementById('hienthi').innerHTML = + lam + ' ăn ít thôi';
+            document.getElementById('hienthi').innerHTML = +lam + ' ăn ít thôi';
         }
     }
 </script>
